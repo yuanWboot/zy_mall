@@ -1,6 +1,6 @@
 package com.zy.mall.service.impl;
 
-import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
+
 import com.zy.mall.exception.ImoocMallException;
 import com.zy.mall.exception.ImoocMallExceptionEnum;
 import com.zy.mall.model.dao.UserMapper;
@@ -38,6 +38,6 @@ public class UserServiceImpl implements UerService {
         if (count == 0){
             throw new ImoocMallException(ImoocMallExceptionEnum.INSERT_FAILED);
         }
-        
+
     }
 }

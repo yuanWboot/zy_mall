@@ -27,6 +27,8 @@ public class UserController {
     /**
      * 注册
      */
+    @PostMapping("/register")
+    @ResponseBody
     public ApiRestResponse register(@RequestParam("userName") String userName,
                                     @RequestParam("password") String password) throws ImoocMallException {
 
