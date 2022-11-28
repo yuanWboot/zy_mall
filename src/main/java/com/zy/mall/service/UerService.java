@@ -7,4 +7,8 @@ import com.zy.mall.model.pojo.User;
  */
 public interface UerService {
     User getUser();
+    /**
+     * 注册方法
+     */
+    void  register(String userName , String password);
 }
