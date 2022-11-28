@@ -1,6 +1,7 @@
 package com.zy.mall.controller;
 
 import com.zy.mall.common.ApiRestResponse;
+import com.zy.mall.exception.ImoocMallException;
 import com.zy.mall.exception.ImoocMallExceptionEnum;
 import com.zy.mall.model.pojo.User;
 import com.zy.mall.service.UerService;
@@ -27,7 +28,7 @@ public class UserController {
      * 注册
      */
     public ApiRestResponse register(@RequestParam("userName") String userName,
-                                    @RequestParam("password") String password) {
+                                    @RequestParam("password") String password) throws ImoocMallException {
 
         //用户名非空校验
         if (StringUtils.isEmpty(userName)){
@@ -41,6 +42,7 @@ public class UserController {
         if (password.length()<8){
             return ApiRestResponse.error(ImoocMallExceptionEnum.PASSWORD_TOO_SHORT);
         }
-        return null;
+        uerService.register(userName,password);
+        return ApiRestResponse.success();
     }
 }

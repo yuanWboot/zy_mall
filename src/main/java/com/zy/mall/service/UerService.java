@@ -1,5 +1,6 @@
 package com.zy.mall.service;
 
+import com.zy.mall.exception.ImoocMallException;
 import com.zy.mall.model.pojo.User;
 
 /**
@@ -10,5 +11,5 @@ public interface UerService {
     /**
      * 注册方法
      */
-    void  register(String userName , String password);
+    void  register(String userName , String password) throws ImoocMallException;
 }

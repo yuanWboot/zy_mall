@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb8e69df-b86a-4207-a9ea-da7cea15742f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="cb8e69df-b86a-4207-a9ea-da7cea15742f" name="Default Changelist" comment="登录方法中：创建统一异常类，登录查询用户名方法、对应的SQL">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zy/mall/model/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/model/dao/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zy/mall/exception/ImoocMallExceptionEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/exception/ImoocMallExceptionEnum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zy/mall/service/UerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/service/UerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zy/mall/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,8 +92,16 @@
       <option name="presentableId" value="Default" />
       <updated>1669612028549</updated>
       <workItem from="1669612029834" duration="7090000" />
-      <workItem from="1669626200159" duration="3660000" />
+      <workItem from="1669626200159" duration="4367000" />
     </task>
+    <task id="LOCAL-00001" summary="登录方法中：创建统一异常类，登录查询用户名方法、对应的SQL">
+      <created>1669645916420</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669645916420</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,5 +117,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="登录方法中：创建统一异常类，登录查询用户名方法、对应的SQL" />
+    <option name="LAST_COMMIT_MESSAGE" value="登录方法中：创建统一异常类，登录查询用户名方法、对应的SQL" />
   </component>
 </project>

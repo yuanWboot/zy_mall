@@ -3,7 +3,9 @@ package com.zy.mall.exception;
 public enum ImoocMallExceptionEnum {
      NEED_USER_NAME(10001,"用户名不能为空"),
      NEED_PASSWORD(10002,"密码不能为空"),
-     PASSWORD_TOO_SHORT(10003,"密码长度不小于8位");
+     PASSWORD_TOO_SHORT(10003,"密码长度不小于8位"),
+     NAME_EXISTED(10005,"用户名已存在，请换一个！"),
+     INSERT_FAILED(10006,"数据插入失败，请重试！");
     /**
      * 异常码
      */
