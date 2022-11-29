@@ -6,6 +6,7 @@ import com.zy.mall.common.Constant;
 import com.zy.mall.exception.ImoocMallExceptionEnum;
 import com.zy.mall.model.pojo.User;
 import com.zy.mall.model.request.AddCategoryReq;
+import com.zy.mall.model.vo.CategoryVo;
 import com.zy.mall.service.CategoryService;
 import com.zy.mall.service.UserService;
 import io.swagger.annotations.ApiOperation;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+import java.util.List;
 
 /**
  * 商品目录controller
@@ -74,8 +76,16 @@ public class CategoryController {
     @ApiOperation("后台目录列表")
     @PostMapping("/admin/category/list")
     @ResponseBody
-    public ApiRestResponse listCategory(@RequestParam Integer pageNum,@RequestParam Integer pageSize){
+    public ApiRestResponse listCategoryForAdmin(@RequestParam Integer pageNum,@RequestParam Integer pageSize){
         PageInfo pageInfo = categoryService.listForAdmin(pageNum, pageSize);
         return ApiRestResponse.success(pageInfo);
+    }
+
+    @ApiOperation("前台目录列表")
+    @PostMapping("/category/list")
+    @ResponseBody
+    public ApiRestResponse listCategoryForCustomer(){
+        List<CategoryVo> categoryVos = categoryService.listCategoryForCustomer();
+        return ApiRestResponse.success(categoryVos);
     }
 }

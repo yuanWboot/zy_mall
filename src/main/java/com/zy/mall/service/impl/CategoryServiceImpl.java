@@ -12,7 +12,9 @@ import com.zy.mall.service.CategoryService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -44,7 +46,7 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public void delete(Integer id){
+    public void delete(Integer id) {
         //根据id查找对象
         Category categoryOld = categoryMapper.selectByPrimaryKey(id);
         //查不到记录，无法删除，删除失败
@@ -60,10 +62,32 @@ public class CategoryServiceImpl implements CategoryService {
 
     //分页列表中有categoryList
     @Override
-    public PageInfo listForAdmin(Integer pageNum, Integer pageSize){
-        PageHelper.startPage(pageNum,pageSize,"type,order_num");
+    public PageInfo listForAdmin(Integer pageNum, Integer pageSize) {
+        PageHelper.startPage(pageNum, pageSize, "type,order_num");
         List<Category> categoryList = categoryMapper.selectList();
         PageInfo pageInfo = new PageInfo(categoryList);
         return pageInfo;
+    }
+
+    @Override
+    public List<CategoryVo> listCategoryForCustomer() {
+        ArrayList<CategoryVo> categoryVoList = new ArrayList<>();
+        recursivelyFindCategories(categoryVoList,0);
+        return categoryVoList;
+    }
+
+    private void recursivelyFindCategories(List<CategoryVo> categoryVoList, Integer parentId) {
+        //递归获取所有子类类别，并组合成为一个“目录树”
+        List<Category> categoryList = categoryMapper.selectCategoriesByParentId(parentId);
+        if (!CollectionUtils.isEmpty(categoryList)) {
+            for (int i = 0; i < categoryList.size(); i++) {
+                Category category = categoryList.get(i);
+                CategoryVo categoryVo = new CategoryVo();
+                BeanUtils.copyProperties(category,categoryVo);
+                categoryVoList.add(categoryVo);
+                //子目录
+                recursivelyFindCategories(categoryVo.getChildCategory(),categoryVo.getId());
+            }
+        }
     }
 }
