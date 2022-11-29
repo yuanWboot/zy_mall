@@ -4,20 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb8e69df-b86a-4207-a9ea-da7cea15742f" name="Default Changelist" comment="用户模块：登录、登出、更新签名、管理员登录功能">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/controller/CategoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/model/request/AddCategoryReq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/service/CategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/service/impl/CategoryServiceImpl.java" afterDir="false" />
+    <list default="true" id="cb8e69df-b86a-4207-a9ea-da7cea15742f" name="Default Changelist" comment="商品模块：管理员新增商品">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zy/mall/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zy/mall/exception/ImoocMallException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/exception/ImoocMallException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zy/mall/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zy/mall/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/exception/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zy/mall/exception/ImoocMallExceptionEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/exception/ImoocMallExceptionEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zy/mall/model/dao/CategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/model/dao/CategoryMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zy/mall/service/UerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zy/mall/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/CategoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/CategoryMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zy/mall/model/request/AddCategoryReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/model/request/AddCategoryReq.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +107,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669612028549</updated>
       <workItem from="1669612029834" duration="7090000" />
-      <workItem from="1669626200159" duration="17894000" />
+      <workItem from="1669626200159" duration="19237000" />
     </task>
     <task id="LOCAL-00001" summary="登录方法中：创建统一异常类，登录查询用户名方法、对应的SQL">
       <created>1669645916420</created>
@@ -173,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669695811086</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="商品模块：管理员新增商品">
+      <created>1669716582002</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669716582002</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +198,7 @@
     <MESSAGE value="创建MD5工具" />
     <MESSAGE value="利用MD5工具对密码进行加密" />
     <MESSAGE value="用户模块：登录、登出、更新签名、管理员登录功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="用户模块：登录、登出、更新签名、管理员登录功能" />
+    <MESSAGE value="商品模块：管理员新增商品" />
+    <option name="LAST_COMMIT_MESSAGE" value="商品模块：管理员新增商品" />
   </component>
 </project>

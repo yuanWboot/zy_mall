@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
 /**
  * 商品目录controller
@@ -26,15 +27,17 @@ public class CategoryController {
     CategoryService categoryService;
     @PostMapping("/admin/category/add")
     @ResponseBody
-    public ApiRestResponse addCategory(HttpSession session,@RequestBody AddCategoryReq addCategoryReq) {
+    public ApiRestResponse addCategory(HttpSession session,
+                                       @Valid @RequestBody AddCategoryReq addCategoryReq) {
         //四个参数都不能为空，否则返回异常
-        if (addCategoryReq.getName() == null ||
-                addCategoryReq.getType() == null ||
-                addCategoryReq.getParentId() == null ||
-                addCategoryReq.getOrderNum() == null
-        ) {
-            return ApiRestResponse.error(ImoocMallExceptionEnum.PARAM_NOT_NULL);
-        }
+        // @Valid有这个注解不需要以下校验
+//        if (addCategoryReq.getName() == null ||
+//                addCategoryReq.getType() == null ||
+//                addCategoryReq.getParentId() == null ||
+//                addCategoryReq.getOrderNum() == null
+//        ) {
+//            return ApiRestResponse.error(ImoocMallExceptionEnum.PARAM_NOT_NULL);
+//        }
         //获取当前用户
         User currentUser = (User)session.getAttribute(Constant.IMOOC_MALL_USER);
         //为空说明未登录。提示未登录
