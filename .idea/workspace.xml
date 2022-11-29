@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb8e69df-b86a-4207-a9ea-da7cea15742f" name="Default Changelist" comment="为注册方法添加post请求和地址">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/exception/GlobalExceptionHandler.java" afterDir="false" />
+    <list default="true" id="cb8e69df-b86a-4207-a9ea-da7cea15742f" name="Default Changelist" comment="处理统一异常handler:修正了引入的依赖包">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/util/MD5Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zy/mall/exception/ImoocMallExceptionEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/exception/ImoocMallExceptionEnum.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +51,20 @@
       <recent name="E:\慕课springboot\zy_mall\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ZyMallApplication">
+  <component name="RunManager" selected="Application.MD5Utils">
+    <configuration name="MD5Utils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zy.mall.util.MD5Utils" />
+      <module name="zy_mall" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zy.mall.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -78,6 +90,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MD5Utils" />
         <item itemvalue="HTTP Request.generated-requests#8" />
       </list>
     </recent_temporary>
@@ -91,7 +104,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669612028549</updated>
       <workItem from="1669612029834" duration="7090000" />
-      <workItem from="1669626200159" duration="6190000" />
+      <workItem from="1669626200159" duration="9423000" />
     </task>
     <task id="LOCAL-00001" summary="登录方法中：创建统一异常类，登录查询用户名方法、对应的SQL">
       <created>1669645916420</created>
@@ -114,7 +127,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669646775991</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="处理统一异常handler">
+      <created>1669650314062</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669650314062</updated>
+    </task>
+    <task id="LOCAL-00005" summary="处理统一异常handler:修正了引入的依赖包">
+      <created>1669650564206</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669650564206</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +162,8 @@
     <MESSAGE value="登录方法中：创建统一异常类，登录查询用户名方法、对应的SQL" />
     <MESSAGE value="初步完成注册校验" />
     <MESSAGE value="为注册方法添加post请求和地址" />
-    <option name="LAST_COMMIT_MESSAGE" value="为注册方法添加post请求和地址" />
+    <MESSAGE value="处理统一异常handler" />
+    <MESSAGE value="处理统一异常handler:修正了引入的依赖包" />
+    <option name="LAST_COMMIT_MESSAGE" value="处理统一异常handler:修正了引入的依赖包" />
   </component>
 </project>
