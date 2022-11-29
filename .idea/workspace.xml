@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb8e69df-b86a-4207-a9ea-da7cea15742f" name="Default Changelist" comment="商品模块：swagger自动生成API文档">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/config/AdminFilterConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/filter/AdminFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="cb8e69df-b86a-4207-a9ea-da7cea15742f" name="Default Changelist" comment="商品模块：管理员删除商品目录">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/model/vo/CategoryVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zy/mall/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/controller/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zy/mall/exception/ImoocMallExceptionEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/exception/ImoocMallExceptionEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zy/mall/model/dao/CategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/model/dao/CategoryMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zy/mall/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/service/CategoryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zy/mall/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/CategoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/CategoryMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +55,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\慕课springboot\zy_mall\src\main\java\com\zy\mall" />
       <recent name="E:\慕课springboot\zy_mall\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zy.mall.model.vo" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.ZyMallApplication">
@@ -110,7 +113,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669612028549</updated>
       <workItem from="1669612029834" duration="7090000" />
-      <workItem from="1669626200159" duration="22870000" />
+      <workItem from="1669626200159" duration="23982000" />
     </task>
     <task id="LOCAL-00001" summary="登录方法中：创建统一异常类，登录查询用户名方法、对应的SQL">
       <created>1669645916420</created>
@@ -196,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669722137399</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="商品模块：管理员删除商品目录">
+      <created>1669729727421</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1669729727421</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +235,7 @@
     <MESSAGE value="商品模块：管理员新增商品" />
     <MESSAGE value="商品模块：管理员新增商品:把异常处理对外暴露的提示" />
     <MESSAGE value="商品模块：swagger自动生成API文档" />
-    <option name="LAST_COMMIT_MESSAGE" value="商品模块：swagger自动生成API文档" />
+    <MESSAGE value="商品模块：管理员删除商品目录" />
+    <option name="LAST_COMMIT_MESSAGE" value="商品模块：管理员删除商品目录" />
   </component>
 </project>

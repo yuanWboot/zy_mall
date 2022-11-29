@@ -1,14 +1,19 @@
 package com.zy.mall.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.zy.mall.exception.ImoocMallException;
 import com.zy.mall.exception.ImoocMallExceptionEnum;
 import com.zy.mall.model.dao.CategoryMapper;
 import com.zy.mall.model.pojo.Category;
 import com.zy.mall.model.request.AddCategoryReq;
+import com.zy.mall.model.vo.CategoryVo;
 import com.zy.mall.service.CategoryService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * 商品目录分类实现
@@ -51,5 +56,14 @@ public class CategoryServiceImpl implements CategoryService {
             throw new ImoocMallException(ImoocMallExceptionEnum.DELETE_FAILED);
         }
 
+    }
+
+    //分页列表中有categoryList
+    @Override
+    public PageInfo listForAdmin(Integer pageNum, Integer pageSize){
+        PageHelper.startPage(pageNum,pageSize,"type,order_num");
+        List<Category> categoryList = categoryMapper.selectList();
+        PageInfo pageInfo = new PageInfo(categoryList);
+        return pageInfo;
     }
 }

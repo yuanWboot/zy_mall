@@ -1,5 +1,6 @@
 package com.zy.mall.controller;
 
+import com.github.pagehelper.PageInfo;
 import com.zy.mall.common.ApiRestResponse;
 import com.zy.mall.common.Constant;
 import com.zy.mall.exception.ImoocMallExceptionEnum;
@@ -68,5 +69,13 @@ public class CategoryController {
     public ApiRestResponse deleteCategory(@RequestParam Integer id){
         categoryService.delete(id);
         return ApiRestResponse.success();
+    }
+
+    @ApiOperation("后台目录列表")
+    @PostMapping("/admin/category/list")
+    @ResponseBody
+    public ApiRestResponse listCategory(@RequestParam Integer pageNum,@RequestParam Integer pageSize){
+        PageInfo pageInfo = categoryService.listForAdmin(pageNum, pageSize);
+        return ApiRestResponse.success(pageInfo);
     }
 }
