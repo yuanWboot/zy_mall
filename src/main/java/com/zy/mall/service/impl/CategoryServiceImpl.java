@@ -17,22 +17,38 @@ import org.springframework.stereotype.Service;
 public class CategoryServiceImpl implements CategoryService {
     @Autowired
     CategoryMapper categoryMapper;
+
     @Override
-    public void add(AddCategoryReq addCategoryReq){
+    public void add(AddCategoryReq addCategoryReq) {
         Category category = new Category();
         //利用框架的工具将addCategoryReq与category的对字段赋值
-        BeanUtils.copyProperties(addCategoryReq,category);
+        BeanUtils.copyProperties(addCategoryReq, category);
         //查询名字是否存在
         Category categoryOld = categoryMapper.selectByName(addCategoryReq.getName());
         if (categoryOld != null) {
             //不为空说明已存在，返回不允许重复异常
-         throw  new ImoocMallException(ImoocMallExceptionEnum.NAME_EXISTED);
+            throw new ImoocMallException(ImoocMallExceptionEnum.NAME_EXISTED);
         }
         //没有任何问题则插入数据表
         int count = categoryMapper.insertSelective(category);
         //返回0说明插入失败，抛出异常
         if (count == 0) {
             throw new ImoocMallException(ImoocMallExceptionEnum.CREATE_FAILED);
+        }
+
+    }
+
+    @Override
+    public void delete(Integer id){
+        //根据id查找对象
+        Category categoryOld = categoryMapper.selectByPrimaryKey(id);
+        //查不到记录，无法删除，删除失败
+        if (categoryOld == null) {
+            throw new ImoocMallException(ImoocMallExceptionEnum.DELETE_FAILED);
+        }
+        int count = categoryMapper.deleteByPrimaryKey(id);
+        if (count == 0) {
+            throw new ImoocMallException(ImoocMallExceptionEnum.DELETE_FAILED);
         }
 
     }
