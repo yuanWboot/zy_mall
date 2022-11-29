@@ -48,4 +48,50 @@ public class UserServiceImpl implements UerService {
         }
 
     }
+
+    /**
+     * 登录
+     * @param userName
+     * @param password
+     * @return
+     * @throws ImoocMallException
+     */
+    @Override
+    public User login(String userName, String password) throws ImoocMallException {
+        String md5Password = null;
+        try {
+            md5Password = MD5Utils.getMD5Str(password);
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        User user = userMapper.selectLogin(userName,md5Password);
+        if (user == null) {
+            throw new ImoocMallException(ImoocMallExceptionEnum.WRONG_PASSWORD);
+        }
+        return user;
+    }
+
+    /**
+     * 更新签名
+     * @param user
+     * @throws ImoocMallException
+     */
+    @Override
+    public void updateUserInformation(User user) throws ImoocMallException {
+        int updateCount = userMapper.updateByPrimaryKeySelective(user);
+        if (updateCount > 1) {
+            throw new ImoocMallException(ImoocMallExceptionEnum.UPDATE_FAILED);
+        }
+    }
+
+    /**
+     * 是否管理员
+     * @param user
+     * @return
+     */
+    @Override
+    public boolean checkAdminRole(User user){
+        //1是普通用户，2是管理员
+        return user.getRole().equals(2);
+    }
 }

@@ -1,6 +1,7 @@
 package com.zy.mall.model.dao;
 
 import com.zy.mall.model.pojo.User;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -24,4 +25,6 @@ public interface UserMapper {
      * @return
      */
     User selectByName(String userName);
+
+    User selectLogin(@Param("userName") String userName, @Param("password")String password);
 }
