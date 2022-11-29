@@ -6,8 +6,11 @@ import com.zy.mall.exception.ImoocMallExceptionEnum;
 import com.zy.mall.model.dao.UserMapper;
 import com.zy.mall.model.pojo.User;
 import com.zy.mall.service.UerService;
+import com.zy.mall.util.MD5Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.security.NoSuchAlgorithmException;
 
 @Service
 public class UserServiceImpl implements UerService {
@@ -33,7 +36,12 @@ public class UserServiceImpl implements UerService {
         //写入到数据库
         User user = new User();
         user.setUsername(userName);
-        user.setPassword(password);
+        //密码加盐后进行MD5
+        try {
+            user.setPassword(MD5Utils.getMD5Str(password));
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
         int count = userMapper.insertSelective(user);
         if (count == 0){
             throw new ImoocMallException(ImoocMallExceptionEnum.INSERT_FAILED);
