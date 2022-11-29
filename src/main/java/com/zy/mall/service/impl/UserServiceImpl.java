@@ -5,7 +5,7 @@ import com.zy.mall.exception.ImoocMallException;
 import com.zy.mall.exception.ImoocMallExceptionEnum;
 import com.zy.mall.model.dao.UserMapper;
 import com.zy.mall.model.pojo.User;
-import com.zy.mall.service.UerService;
+import com.zy.mall.service.UserService;
 import com.zy.mall.util.MD5Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import java.security.NoSuchAlgorithmException;
 
 @Service
-public class UserServiceImpl implements UerService {
+public class UserServiceImpl implements UserService {
     @Autowired
     UserMapper userMapper;
     @Override

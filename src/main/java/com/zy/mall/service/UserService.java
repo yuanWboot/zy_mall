@@ -6,7 +6,7 @@ import com.zy.mall.model.pojo.User;
 /**
  * UserService
  */
-public interface UerService {
+public interface UserService {
     User getUser();
     /**
      * 注册接口

@@ -5,7 +5,7 @@ import com.zy.mall.common.Constant;
 import com.zy.mall.exception.ImoocMallException;
 import com.zy.mall.exception.ImoocMallExceptionEnum;
 import com.zy.mall.model.pojo.User;
-import com.zy.mall.service.UerService;
+import com.zy.mall.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
@@ -19,12 +19,12 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class UserController {
     @Autowired
-    UerService uerService;
+    UserService userService;
 
     @GetMapping("/test")
     @ResponseBody
     public User personPage() {
-        return uerService.getUser();
+        return userService.getUser();
     }
 
     /**
@@ -47,7 +47,7 @@ public class UserController {
         if (password.length()<8){
             return ApiRestResponse.error(ImoocMallExceptionEnum.PASSWORD_TOO_SHORT);
         }
-        uerService.register(userName,password);
+        userService.register(userName,password);
         return ApiRestResponse.success();
     }
 
@@ -77,7 +77,7 @@ public class UserController {
         if (password.length()<8){
             return ApiRestResponse.error(ImoocMallExceptionEnum.PASSWORD_TOO_SHORT);
         }
-        User user = uerService.login(userName, password);
+        User user = userService.login(userName, password);
         //保存用户信息时，不保存密码
         user.setPassword(null);
         session.setAttribute(Constant.IMOOC_MALL_USER,user);
@@ -103,7 +103,7 @@ public class UserController {
         User user = new User();
         user.setId(currentUser.getId());
         user.setPersonalizedSignature(signature);
-        uerService.updateUserInformation(user);
+        userService.updateUserInformation(user);
         return ApiRestResponse.success(user);
     }
 
@@ -137,8 +137,8 @@ public class UserController {
         if (password.length()<8){
             return ApiRestResponse.error(ImoocMallExceptionEnum.PASSWORD_TOO_SHORT);
         }
-        User user = uerService.login(userName, password);
-        if (uerService.checkAdminRole(user)) {
+        User user = userService.login(userName, password);
+        if (userService.checkAdminRole(user)) {
             //是管理员，执行后续操作
             //保存用户信息时，不保存密码
             user.setPassword(null);
