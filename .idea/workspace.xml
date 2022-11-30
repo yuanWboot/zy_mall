@@ -4,31 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb8e69df-b86a-4207-a9ea-da7cea15742f" name="Default Changelist" comment="商品模块：递归查询用户商品目录">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_3_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_cache_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/config/CachingConfig.java" afterDir="false" />
+    <list default="true" id="cb8e69df-b86a-4207-a9ea-da7cea15742f" name="Default Changelist" comment="商品模块：redis缓存用户商品目录，加快相应">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/controller/ProductAdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/model/request/AddProductReq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/service/impl/ProductServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zy/ZyMallApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/ZyMallApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zy/mall/model/vo/CategoryVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/model/vo/CategoryVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zy/mall/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/service/impl/CategoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zy_mall.iml" beforeDir="false" afterPath="$PROJECT_DIR$/zy_mall.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zy/mall/model/dao/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/mall/model/dao/ProductMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/ProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/ProductMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +60,8 @@
       <recent name="E:\慕课springboot\zy_mall\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zy.mall.service" />
+      <recent name="com.zy.mall.model.request" />
       <recent name="com.zy.mall.config" />
       <recent name="com.zy.mall.model.vo" />
     </key>
@@ -134,7 +119,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669612028549</updated>
       <workItem from="1669612029834" duration="7090000" />
-      <workItem from="1669626200159" duration="30370000" />
+      <workItem from="1669626200159" duration="33313000" />
     </task>
     <task id="LOCAL-00001" summary="登录方法中：创建统一异常类，登录查询用户名方法、对应的SQL">
       <created>1669645916420</created>
@@ -241,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669733037942</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="商品模块：redis缓存用户商品目录，加快相应">
+      <created>1669770190800</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1669770190800</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,7 +265,8 @@
     <MESSAGE value="商品模块：管理员删除商品目录" />
     <MESSAGE value="商品模块：管理员商品目录" />
     <MESSAGE value="商品模块：递归查询用户商品目录" />
-    <option name="LAST_COMMIT_MESSAGE" value="商品模块：递归查询用户商品目录" />
+    <MESSAGE value="商品模块：redis缓存用户商品目录，加快相应" />
+    <option name="LAST_COMMIT_MESSAGE" value="商品模块：redis缓存用户商品目录，加快相应" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
