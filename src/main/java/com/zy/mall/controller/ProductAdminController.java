@@ -5,8 +5,12 @@ import com.zy.mall.common.ApiRestResponse;
 import com.zy.mall.common.Constant;
 import com.zy.mall.exception.ImoocMallException;
 import com.zy.mall.exception.ImoocMallExceptionEnum;
+import com.zy.mall.model.pojo.Product;
 import com.zy.mall.model.request.AddProductReq;
+import com.zy.mall.model.request.UpdateProductReq;
 import com.zy.mall.service.ProductService;
+import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -78,5 +82,20 @@ public class ProductAdminController {
             effectiveURI =null;
         }
         return effectiveURI;
+    }
+    @ApiOperation("后台更新商品")
+    @PostMapping("/admin/product/update")
+    public  ApiRestResponse updateProduct(@Valid @RequestBody UpdateProductReq updateProductReq){
+        Product product = new Product();
+        BeanUtils.copyProperties(updateProductReq,product);
+        productService.update(product);
+        return ApiRestResponse.success();
+    }
+
+    @ApiOperation("后台删除商品")
+    @PostMapping("/admin/product/delete")
+    public ApiRestResponse deleteProduct(@RequestParam Integer id) {
+        productService.delete(id);
+        return ApiRestResponse.success();
     }
 }

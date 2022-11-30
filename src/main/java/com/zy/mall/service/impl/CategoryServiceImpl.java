@@ -6,6 +6,7 @@ import com.zy.mall.exception.ImoocMallException;
 import com.zy.mall.exception.ImoocMallExceptionEnum;
 import com.zy.mall.model.dao.CategoryMapper;
 import com.zy.mall.model.pojo.Category;
+import com.zy.mall.model.pojo.Product;
 import com.zy.mall.model.request.AddCategoryReq;
 import com.zy.mall.model.vo.CategoryVo;
 import com.zy.mall.service.CategoryService;
@@ -93,4 +94,5 @@ public class CategoryServiceImpl implements CategoryService {
             }
         }
     }
+
 }
