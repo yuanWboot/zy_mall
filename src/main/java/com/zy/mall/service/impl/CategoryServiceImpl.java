@@ -11,6 +11,8 @@ import com.zy.mall.model.vo.CategoryVo;
 import com.zy.mall.service.CategoryService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
@@ -70,6 +72,7 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
+    @Cacheable(value = "listCategoryForCustomer")
     public List<CategoryVo> listCategoryForCustomer() {
         ArrayList<CategoryVo> categoryVoList = new ArrayList<>();
         recursivelyFindCategories(categoryVoList,0);
